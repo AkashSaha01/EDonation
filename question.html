@@ -1,0 +1,201 @@
+<!---->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Donation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-poppins mx-0 max-[100]:">
+    <header class="md:container mx-0 p-0 sticky top-0 z-50">
+      <nav class="bg-yellow-50">
+        <div
+          class="flex-1 justify-between navbar lg:grid lg:grid-cols-[20%_55%_25%]"
+        >
+          <div class="flex items-center justify-center">
+            <a
+              href="index.html"
+              class="btn bg-lime-400 text-black px-5 py-2 mx-2 text-lg hover:bg-lime-700 hover:text-white hidden lg:inline-block"
+              >Home</a
+            >
+
+            <a
+              href="index.html"
+              class="btn bg-yellow-50 text-black px-5 mx-2 text-2xl lg:hidden"
+              ><i class="fa-solid fa-house"></i
+            ></a>
+          </div>
+
+          <div
+            class="navbar-center hidden lg:flex items-center justify-center sm:hidden"
+          >
+            <img src="./assets/logo.png" />
+            <span class="px-2 text-4xl font-bold">E-Donation</span>
+          </div>
+          <div class="navbar-center lg:hidden">
+            <span class="px-2 text-3xl font-bold">E-Donation</span>
+          </div>
+          <div class="hidden lg:flex items-center justify-center">
+            <a class="flex items-center text-black px-3 rounded-full mx-2">
+              <img src="./assets/coin.png" alt="total coin" class="mr-2" />
+              <span id="pocket-amount" class="text-2xl font-semibold"
+                >5000 BDT</span
+              >
+            </a>
+          </div>
+        </div>
+        <br />
+      </nav>
+    </header>
+
+    <br />
+    <div class="text-black text-center py-4">
+      <h1 class="text-3xl font-bold">Important FAQ</h1>
+    </div>
+
+    <div class="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
+      <form>
+        <div class="mb-6">
+          <div class="relative">
+            <button
+              type="button"
+              onclick="toggleField('q1')"
+              class="w-full bg-gray-100 text-left py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            >
+              <span>What is the Document Object Model?</span>
+            </button>
+            <div id="q1" class="hidden mt-2">
+              <input
+                type="text"
+                name="q1"
+                placeholder="Type your answer here"
+                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <div class="relative">
+            <button
+              type="button"
+              onclick="toggleField('q2')"
+              class="w-full bg-gray-100 text-left py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            >
+              <span
+                >What are the differences between querySelector and
+                querySelectorAll?</span
+              >
+            </button>
+            <div id="q2" class="hidden mt-2">
+              <input
+                type="text"
+                name="q2"
+                placeholder="Type your answer here"
+                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <div class="relative">
+            <button
+              type="button"
+              onclick="toggleField('q3')"
+              class="w-full bg-gray-100 text-left py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            >
+              <span>How do you select an element by its ID in the DOM?</span>
+            </button>
+            <div id="q3" class="hidden mt-2">
+              <input
+                type="text"
+                name="q3"
+                placeholder="Type your answer here"
+                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="relative">
+            <button
+              type="button"
+              onclick="toggleField('q4')"
+              class="w-full bg-gray-100 text-left py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            >
+              <span>How do you add a new element to the DOM?</span>
+            </button>
+            <div id="q4" class="hidden mt-2">
+              <input
+                type="text"
+                name="q4"
+                placeholder="Type your answer here"
+                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="relative">
+            <button
+              type="button"
+              onclick="toggleField('q5')"
+              class="w-full bg-gray-100 text-left py-2 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+            >
+              <span>HHow can you remove an element from the DOM?</span>
+            </button>
+            <div id="q5" class="hidden mt-2">
+              <input
+                type="text"
+                name="q5"
+                placeholder="Type your answer here"
+                class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-lime-300 text-black font-semibold py-2 px-4 rounded-md shadow-lg hover:bg-lime-700 hover:text-white transition duration-300"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <script>
+      function toggleField(id) {
+        const field = document.getElementById(id);
+        field.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+  <footer class="bg-yellow-50"></footer>
+</html>
+-->
