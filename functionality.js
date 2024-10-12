@@ -94,7 +94,6 @@ document
     const totalQuoataCollection = parseFloat(getTextValueByID("quoata-amount"));
     const originAmount = parseFloat(getTextValueByID("pocket-amount"));
 
-    // Validate input: check if it's a number and greater than or equal to 1
     if (isNaN(inputQuoata) || inputQuoata < 1) {
       window.alert(
         "Please enter a valid number greater than or equal to 1 for the donation."
@@ -110,7 +109,6 @@ document
     );
     document.getElementById("pocket-amount").innerText = updatedTotalPocket;
 
-    // Create and append the transaction history entry
     const div = document.createElement("div");
     div.classList.add("bg-gray-50", "p-3", "my-2", "border", "border-gray-200");
 
