@@ -16,11 +16,11 @@ function showSelectionById(id) {
   document.getElementById(id).classList.remove("hidden");
   if (id == "history-block") {
     document.getElementById("history-btn").classList.add("bg-lime-400");
-    document.getElementById("donation-btn").classList.remove("bg-lime-200");
-    document.getElementById("donation-btn").classList.add("bg-gray-400");
+    document.getElementById("donation-btn").classList.remove("bg-lime-400");
+    document.getElementById("donation-btn").classList.add("bg-gray-200");
   } else if (id == "card-calculation") {
-    document.getElementById("history-btn").classList.remove("bg-lime-200");
-    document.getElementById("history-btn").classList.add("bg-gray-400");
+    document.getElementById("history-btn").classList.remove("bg-lime-400");
+    document.getElementById("history-btn").classList.add("bg-gray-200");
     document.getElementById("donation-btn").classList.add("bg-lime-400");
   }
 }
